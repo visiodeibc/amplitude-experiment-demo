@@ -116,6 +116,13 @@ This project uses Amplitude for analytics and experiments. Follow these steps to
 
 5. **Configure Variants**: Configure your experiment variants in the Amplitude dashboard to control which variant is shown to users.
 
+In experiment configuration assigne bear@amplitude.com" : "rabbit@amplitude.com" each to tester of control and variant.
+everytime you refresh the data it will randomly assign to either one of them according to logic in `amplitudeWrapper.tsx`
+
+>       const random = Math.random() > 0.5;
+
+      const winner = random ? "bear@amplitude.com" : "rabbit@amplitude.com";
+
 ## Learn More
 
 To learn more about setting up and using Amplitude Experiment, refer to the [Amplitude Experiment Documentation](https://www.docs.amplitude.com/experiment).
