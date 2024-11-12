@@ -11,7 +11,11 @@ export default function Game() {
 
   const handleButtonClick = () => {
     setImageSrc(
-      `/${experiment.variant("your-experiment-feature-flag")?.value}.png`
+      `/${
+        experiment.variant("your-experiment-feature-flag")?.value === "control"
+          ? "bear.png"
+          : "rabbit.png"
+      }`
     );
     setClicked(true);
   };
